@@ -1714,3 +1714,47 @@ h1, h2, h3, h4, h5, h6 {
 .validated:after {
   content: ' ✔';
 }
+
+
+.navbar-right-lang a {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.navbar-right-lang li.separator {
+  padding-left: 5px;
+  padding-right: 5px;
+  line-height: 20px;
+  display: block;
+  position: relative;
+
+}
+
+
+@media (min-width: 768px) {
+  .navbar-right-lang {
+    padding-left: 100px;
+  }
+
+  .navbar-right-lang li.separator {
+    color: rgba(255, 255, 255, 0.5);
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-right-lang {
+    padding-left: 0;
+  }
+
+  .navbar-right-lang li {
+    float: right;
+  }
+
+  .navbar-right-lang li.separator {
+    color: rgba(0, 0, 0, 0.5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
