@@ -30,6 +30,8 @@
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
 
+  <!-- micromodal -->
+  <link rel="stylesheet" href="css/micromodal.css">
   <!-- Animate.css -->
   <link rel="stylesheet" href="css/animate.css">
   <!-- Icomoon Icon Fonts-->
@@ -79,7 +81,7 @@
               <li><a href="#" data-nav-section="when-where"><span>Où  &amp; Quand</span></a></li>
               <li><a href="#" data-nav-section="how-to"><span>Itinéraire</span></a></li>
               <li><a href="#" data-nav-section="blog"><span>Hébergements</span></a></li>
-              <li><a href="#" data-nav-section="rsvp"><span>RSVP</span></a></li>
+              <!-- <li><a href="#" data-nav-section="rsvp"><span>RSVP</span></a></li> -->
               <!-- <li><a href="#" data-nav-section="gallery"><span>Gallery</span></a></li> -->
               <!-- <li><a href="#" data-nav-section="blog"><span>Blog</span></a></li> -->
             </ul>
@@ -817,7 +819,52 @@
     </div>
   </footer>
 
+  <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+            Nous devons reporter...
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+          <p>
+            Comme vous le savez sûrement déjà, nous avons décidé de reporter notre mariage à l'été prochain.
+          </p>
+          <p>
+            À cause de la situation actuelle avec le COVID-19, il ne semble par raisonnable de se réunir cet été.<br>
+            La santé est bien plus importante que n'importe quelle fête. <br>
+            Et les restrictions actuellement en place (port de masque, distanciation sociale, restrictions de mouvement) ne sont malheureusement pas compatibles avec un mariage.<br>
+            Ce n'était pas une décision facile à prendre et nous avons fait tout notre possible pour garder la date initiale. Mais nous sommes persuadé que c'est la bonne décision.
+          </p>
+          <p>
+            <strong>Nous serons heureux de célébrer cette occasion avec vous l'an prochain, le <code>dimanche 1er août</code> (même lieu) !</strong>
+          </p>
+          <p>
+            Nous sommes conscient que certain d'entre vous ont déjà réservé des hébergements et des moyens de transport.<br>
+            N'hésitez pas à nous contacter si vous avez besoin d'aide sur les processus allemand d'annulation.
+          </p>
+          <p>
+            Nous allons maintenir ce site web à jour avec toute nouvelle information pour l'an prochain.<br>
+            Dans tous les cas, nous sommes toujours dispo par téléphone ou autre :)
+          </p>
+          <p>
+            À très vite,
+          </p>
+          <p style="text-align: right">
+            Julia & Romain
+          </p>
+        </main>
+        <footer class="modal__footer">
+          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Fermer</button>
+        </footer>
+      </div>
+    </div>
+  </div>
 
+  <!-- Micromodal -->
+  <script src="js/micromodal.min.js"></script>
   <!-- jQuery -->
   <script src="js/jquery.min.js"></script>
   <!-- jQuery Easing -->
@@ -841,26 +888,30 @@
   <script src="js/main.js"></script>
 
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbw0BJD1CinQUrT7adxwn_Hk4qJEJ5Ax9RF76WlBeBH0hCYqhf3X/exec'
-    const form = document.forms['submit-to-google-sheet']
+    MicroModal.show('modal-1')
+  </script>
 
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      let button = document.getElementById("submit-button")
-      button.classList.add("loading");
+  <script>
+    // const scriptURL = 'https://script.google.com/macros/s/AKfycbw0BJD1CinQUrT7adxwn_Hk4qJEJ5Ax9RF76WlBeBH0hCYqhf3X/exec'
+    // const form = document.forms['submit-to-google-sheet']
 
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          console.log('Success!', response)
-          button.classList.remove("loading");
-          button.classList.add("validated");
-        })
-        .catch(error => {
-          console.error('Error!', error.message)
-          button.classList.remove("loading");
-          alert("Ooops that wasn't supposed to happened...")
-        })
-    })
+    // form.addEventListener('submit', e => {
+    //   e.preventDefault()
+    //   let button = document.getElementById("submit-button")
+    //   button.classList.add("loading");
+
+    //   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    //     .then(response => {
+    //       console.log('Success!', response)
+    //       button.classList.remove("loading");
+    //       button.classList.add("validated");
+    //     })
+    //     .catch(error => {
+    //       console.error('Error!', error.message)
+    //       button.classList.remove("loading");
+    //       alert("Ooops that wasn't supposed to happened...")
+    //     })
+    // })
   </script>
 
   </body>
