@@ -763,6 +763,50 @@
     </div>
   </footer>
 
+  <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+            News
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+          <p>
+            To be able to fully enjoy the party we have to follow some mandatory sanitary rules.
+          </p>
+          <p>
+            Please find below all needed information. <b>Don't hesitate to reach us directly with any inquiry if needed !</b>
+          </p>
+          <div>
+            <img src="images/corona_info_en.png" alr="Corona Informations" style="width: 100%" />
+          </div>
+          <p>
+            Here are some places to get tested in Koblenz or surrounding areas.
+          </p>
+          <ul>
+            <li><a href="www.coronatest-koblenz.de">Corona Drive-In Teststation Hochschule Koblenz</a></li>
+            <li><a href="https://labor-koblenz.de/terminvereinbarung-covid-19">Schnellteststation Koblenz Oberwerth</a></li>
+            <li><a href="https://www.apotheke-im-loehrcenter.de ">Palmpharma Apotheke im Löhr-Center </a></li>
+            <li><a href="https://www.dm.de/services/services-im-markt/corona-schnelltest-zentren-613504 ">DM-drogeriemarkt GmbH + Co. KG (im Forum Mittelrhein)</a></li>
+            <li><a href="https://www.koblenz.de/coronavirus/testen-schnelltests-pcr-tests/">Complete list of test centers in Koblenz (with or without appointment)</a></li>
+            <li><a href="https://covid-19-support.lsjv.rlp.de/hilfe/covid-19-test-dashboard/">Complete list of test centers in the region</a></li>
+          </ul>
+
+          <p style="text-align: right">
+            Julia & Romain
+          </p>
+        </main>
+        <footer class="modal__footer">
+          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- Micromodal -->
+  <script src="js/micromodal.min.js"></script>
   <!-- jQuery -->
   <script src="js/jquery.min.js"></script>
   <!-- jQuery Easing -->
@@ -784,6 +828,10 @@
   <script src="js/magnific-popup-options.js"></script>
   <!-- Main JS (Do not remove) -->
   <script src="js/main.js"></script>
+
+  <script>
+    MicroModal.show('modal-1')
+  </script>
 
   <script>
     // const scriptURL = 'https://script.google.com/macros/s/AKfycbw0BJD1CinQUrT7adxwn_Hk4qJEJ5Ax9RF76WlBeBH0hCYqhf3X/exec'
